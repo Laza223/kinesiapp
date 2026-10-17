@@ -1,0 +1,7 @@
+.next/
+node_modules/
+coverage/
+.tmp/
+pnpm-lock.yaml
+# Migraciones: inmutables una vez aplicadas; reformatearlas cambia archivos que por regla no se tocan.
+supabase/migrations/

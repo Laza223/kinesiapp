@@ -1,0 +1,15 @@
+title = "kinesiapp gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Ejemplos, credenciales de la base de test local y el CA público de Supabase (no son secretos)"
+paths = [
+  '''\.env\.example$''',
+  '''\.env\.test\.example$''',
+  '''\.github/workflows/ci\.yml$''',
+  '''tests/setup-integration\.ts$''',
+  '''scripts/db/prepare-db\.mjs$''',
+  '''src/shared/db/supabase-ca\.ts$''',
+]

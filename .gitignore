@@ -1,0 +1,18 @@
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+# Postgres local efímero (scripts/db/local-pg.sh)
+.tmp/
+# Variables de entorno: solo los ejemplos van al repo
+.env*
+!.env.example
+!.env.test.example
+# Notas crudas de entrevistas: datos de personas, nunca al repo
+docs/gtm/data/
+# Impeccable: estado local por desarrollador
+.impeccable/config.local.json
+.claude/settings.local.json

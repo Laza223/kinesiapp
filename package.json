@@ -1,0 +1,57 @@
+{
+  "name": "kinesiapp",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/ tests/ scripts/",
+    "knip": "knip",
+    "format": "prettier --write src/ tests/ scripts/",
+    "format:check": "prettier --check src/ tests/ scripts/",
+    "test": "vitest run --project unit",
+    "test:integration": "node scripts/db/prepare-db.mjs && vitest run --project integration",
+    "test:isolation": "node scripts/db/prepare-db.mjs && vitest run --project integration tests/integration/isolation.test.ts",
+    "db:local:up": "bash scripts/db/local-pg.sh up",
+    "db:local:down": "bash scripts/db/local-pg.sh down",
+    "db:test:prepare": "node scripts/db/prepare-db.mjs",
+    "ci:local": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm knip && pnpm test && pnpm test:integration && pnpm build"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.6",
+    "@supabase/supabase-js": "2.115.0",
+    "drizzle-orm": "0.45.2",
+    "next": "16.3.8",
+    "postgres": "3.4.9",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.2",
+    "@types/node": "^22",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.2.10",
+    "knip": "6.32.0",
+    "prettier": "3.9.5",
+    "tailwindcss": "4.3.2",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.64.0",
+    "vitest": "3.2.7"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "unrs-resolver"
+    ]
+  }
+}

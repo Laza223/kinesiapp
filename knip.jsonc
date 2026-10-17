@@ -1,0 +1,9 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  // Detector de código muerto, bloqueante en CI. Si knip marca algo: borrarlo o sacarle el
+  // export. La única exención es `/** @public */` pegado al símbolo, con el motivo al lado.
+  "entry": ["scripts/**/*.{mjs,ts}"],
+  "project": ["src/**/*.{ts,tsx,css}", "scripts/**/*.{mjs,ts}", "tests/**/*.ts"],
+  "tags": ["-@public"],
+  "ignoreExportsUsedInFile": false
+}
