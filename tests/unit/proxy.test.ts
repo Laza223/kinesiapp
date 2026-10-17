@@ -24,7 +24,7 @@ function request(path = '/c/x/inicio', headers: Record<string, string> = {}) {
 
 beforeEach(() => {
   vi.stubEnv('NEXT_PUBLIC_SUPABASE_URL', 'http://127.0.0.1:54321')
-  vi.stubEnv('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY', 'sb_publishable_test_key_123456')
+  vi.stubEnv('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY', 'placeholder-placeholder-placeholder')
   getClaims.mockReset()
   capturedSetAll = null
 })
