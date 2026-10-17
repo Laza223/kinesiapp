@@ -1,0 +1,2 @@
+# Falso positivo: clave falsa de un test, ya reemplazada en 4c255de.
+57ea6ae8c90ed3ae8c1b97a9f7b00e88b9853795:tests/unit/proxy.test.ts:generic-api-key:27
